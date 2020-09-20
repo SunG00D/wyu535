@@ -1,10 +1,10 @@
 package cn.ibm.com_5.test;
 /**
- * Ä³½ÌÊÒÓĞÁ½¸öÈë¿Ú,ÔÚÈë³¡Ê±Ã¿Î»Ô±¹¤¶¼ÄÜ»ñÈ¡Ò»ÕÅ¿¨Æ¬,¼ÙÉè°à¼¶ÓĞ50¸öÑ§Éú,ÀûÓÃ¶àÏß³ÌÄ£Äâ½øÈë½ÌÊÒµÄ¹ı³Ì£¬²¢·Ö±ğÍ³¼ÆÃ¿¸öÈë¿ÚÈë³¡µÄÈËÊı,ÒÔ¼°Ã¿¸öÑ§ÉúÄÃµ½µÄ¿¨Æ¬ºÅÂë¡£Ïß³ÌÔËĞĞºó´òÓ¡¸ñÊ½ÈçÏÂ£º
- ±àºÅÎª: 2 µÄÑ§Éú ´ÓºóÃÅ Èë³¡! ÄÃµ½µÄ¿¨Æ¬ºÅÂëÊÇ: [17, 24, 29, 30, 31, 32, 07]
- ±àºÅÎª: 1 µÄÑ§Éú ´ÓºóÃÅ Èë³¡! ÄÃµ½µÄ¿¨Æ¬ºÅÂëÊÇ: [06, 11, 14, 22, 29, 32, 15]
- ´ÓºóÃÅÈë³¡µÄÑ§Éú×Ü¹²: 13 Î»Ñ§Éú
- ´ÓÇ°ÃÅÈë³¡µÄÑ§Éú×Ü¹²: 87 Î»Ñ§Éú
+ * æŸæ•™å®¤æœ‰ä¸¤ä¸ªå…¥å£,åœ¨å…¥åœºæ—¶æ¯ä½å‘˜å·¥éƒ½èƒ½è·å–ä¸€å¼ å¡ç‰‡,å‡è®¾ç­çº§æœ‰50ä¸ªå­¦ç”Ÿ,åˆ©ç”¨å¤šçº¿ç¨‹æ¨¡æ‹Ÿè¿›å…¥æ•™å®¤çš„è¿‡ç¨‹ï¼Œå¹¶åˆ†åˆ«ç»Ÿè®¡æ¯ä¸ªå…¥å£å…¥åœºçš„äººæ•°,ä»¥åŠæ¯ä¸ªå­¦ç”Ÿæ‹¿åˆ°çš„å¡ç‰‡å·ç ã€‚çº¿ç¨‹è¿è¡Œåæ‰“å°æ ¼å¼å¦‚ä¸‹ï¼š
+ ç¼–å·ä¸º: 2 çš„å­¦ç”Ÿ ä»åé—¨ å…¥åœº! æ‹¿åˆ°çš„å¡ç‰‡å·ç æ˜¯: [17, 24, 29, 30, 31, 32, 07]
+ ç¼–å·ä¸º: 1 çš„å­¦ç”Ÿ ä»åé—¨ å…¥åœº! æ‹¿åˆ°çš„å¡ç‰‡å·ç æ˜¯: [06, 11, 14, 22, 29, 32, 15]
+ ä»åé—¨å…¥åœºçš„å­¦ç”Ÿæ€»å…±: 13 ä½å­¦ç”Ÿ
+ ä»å‰é—¨å…¥åœºçš„å­¦ç”Ÿæ€»å…±: 87 ä½å­¦ç”Ÿ
  */
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,11 +12,11 @@ import java.util.List;
 import java.util.Random;
 
 public class Enter implements Runnable {
-	private int studentNum = 50;// Ñ§ÉúÈËÊı£¬Ò²ÊÇ±àºÅ
-	private int frontNum = 0;// Ç°ÃÅÈËÊı
-	private int backNum = 0;// ºóÃÅÈËÊı
-	List<Integer> studentNumList = new ArrayList<>();// ´æ´¢Ô±¹¤±àºÅ
-	List<String> cardList = new ArrayList<>();// ´æ´¢¿¨Æ¬
+	private int studentNum = 50;// å­¦ç”Ÿäººæ•°ï¼Œä¹Ÿæ˜¯ç¼–å·
+	private int frontNum = 0;// å‰é—¨äººæ•°
+	private int backNum = 0;// åé—¨äººæ•°
+	List<Integer> studentNumList = new ArrayList<>();// å­˜å‚¨å‘˜å·¥ç¼–å·
+	List<String> cardList = new ArrayList<>();// å­˜å‚¨å¡ç‰‡
 	HashMap<Integer, String> map = new HashMap<>();
 
 	public void run() {
@@ -27,7 +27,7 @@ public class Enter implements Runnable {
 		}
 	}
 	/**
-	 * ¼ÆËãÑ§ÉúÈËÊıºÍ´òÓ¡Ñ§ÉúºÍ¿¨Æ¬ºÅÂë£¬²¢Í³¼Æ×îºó¸÷¸öÈë¿ÚµÄÈËÊı
+	 * è®¡ç®—å­¦ç”Ÿäººæ•°å’Œæ‰“å°å­¦ç”Ÿå’Œå¡ç‰‡å·ç ï¼Œå¹¶ç»Ÿè®¡æœ€åå„ä¸ªå…¥å£çš„äººæ•°
 	 */
 
 	public void count() {
@@ -41,17 +41,17 @@ public class Enter implements Runnable {
 		studentNumList.add(studentNum);
 
 		if (studentNum == 0) {
-			System.out.println("´ÓºóÃÅÈë³¡µÄÔ±¹¤×Ü¹²£º" + backNum);
-			System.out.println("´ÓÇ°ÃÅÈë³¡µÄÔ±¹¤×Ü¹²£º" + frontNum);
+			System.out.println("ä»åé—¨å…¥åœºçš„å‘˜å·¥æ€»å…±ï¼š" + backNum);
+			System.out.println("ä»å‰é—¨å…¥åœºçš„å‘˜å·¥æ€»å…±ï¼š" + frontNum);
 			return;
 		}
-		String name = Thread.currentThread().getName();// »ñÈ¡Ïß³ÌÃû
-		if (name.equals("Ç°ÃÅ")) {
-			System.out.println("±àºÅÎª: " + studentNum + " µÄÑ§Éú ´Ó" + name + " Èë³¡£¡ÄÃµ½µÄ¿¨Æ¬ºÅÂëÊÇ£º[" + card + "]");
+		String name = Thread.currentThread().getName();// è·å–çº¿ç¨‹å
+		if (name.equals("å‰é—¨")) {
+			System.out.println("ç¼–å·ä¸º: " + studentNum + " çš„å­¦ç”Ÿ ä»" + name + " å…¥åœºï¼æ‹¿åˆ°çš„å¡ç‰‡å·ç æ˜¯ï¼š[" + card + "]");
 			map.put(studentNum, card);
 			frontNum++;
-		} else if (name.equals("ºóÃÅ")) {
-			System.out.println("±àºÅÎª: " + studentNum + " µÄÑ§Éú ´Ó" + name + " Èë³¡£¡ÄÃµ½µÄ¿¨Æ¬ºÅÂëÊÇ£º[" + card + "]");
+		} else if (name.equals("åé—¨")) {
+			System.out.println("ç¼–å·ä¸º: " + studentNum + " çš„å­¦ç”Ÿ ä»" + name + " å…¥åœºï¼æ‹¿åˆ°çš„å¡ç‰‡å·ç æ˜¯ï¼š[" + card + "]");
 			map.put(studentNum, card);
 			backNum++;
 		}
@@ -63,10 +63,10 @@ public class Enter implements Runnable {
 				"16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32",
 				"33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49",
 				"50" };
-		int cnt = 0;// Ñ­»·´ÎÊı
+		int cnt = 0;// å¾ªç¯æ¬¡æ•°
 		String Card = "";
 		while (cnt < 6) {
-			// Ñ­»·Ëæ»ú³éÈ¡6×éºìÉ«Çò
+			// å¾ªç¯éšæœºå¡ç‰‡çš„å·ç 
 			Card += card[new Random().nextInt(card.length)] + ",";
 			cnt++;
 		}
